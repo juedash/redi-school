@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="style/index.css" type="text/css">
 </head>
-<link rel="stylesheet" href="style/index.css" type="text/css">
 
 <body>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
+  <li><a class="active" href="#">Home</a></li>
   <li><a href="/InputTypes.html">Input types</a></li>
   <li><a href="/FormValidation.html">Form Validation</a></li>
-  <li><a href="/FormValidationJS.html">JS Validation</a></li>
 </ul>
+<h3>REDI form</h3>
+<form action="" onsubmit="onFormSubmit()">
+  <label for="username" onmouseover="alert('Username should be in uppercase')">Username *</label><br>
+  <input type="text" name="username" id="username" required pattern="[A-Z]+" value="REDI"><br><br>
+  <label for="password">Password</label><br>
+  <input type="password" name="password" id="password"> <br>
+  <label for="confirmPassword">Confirm Password</label><br>
+  <input type="password" name="confirmPassword" id="confirmPassword"><br><br>
+  <input type="radio" name="gender" id="female" checked value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" name="gender" id="male" value="female">
+  <label for="male">Male</label> <br><br>
+<label for="selectedColor">Select your favorite color</label> </br>
+  <input type="color" id="selectedColor" name="selectedColor"><br><br>
+  <input type="submit">
+</form>
 </body>
+<script>
+  function onFormSubmit(){
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const gender = document.querySelector('input[name="gender"]:checked')?.value;
+    const color = document.getElementById("selectedColor").value;
+
+    if(!password){
+      alert("Password Empty!")
+      return;
+    }
+    if(!confirmPassword){
+      alert("Confirmed pass is empty")
+      return;
+    }
+
+    if(password !== confirmPassword){
+      alert("Confirmed password is different than the password")
+      return;
+    }
+    alert(`New user created!\nUsername: ${username}\nGender: ${gender}\nFavorite Color: ${color}`);
+
+    console.log(color)
+  }
+</script>
 </html>
 
 

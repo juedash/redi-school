@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input Types</title>
+    <link rel="stylesheet" href="style/index.css" type="text/css">
 </head>
 
 <body>
+    <ul>
+        <li><a class="active" href="/index.html">Home</a></li>
+        <li><a href="/InputTypes.html">Input types</a></li>
+        <li><a href="/FormValidation.html">Form Validation</a></li>
+    </ul>
     <div class="container">
         <form>
             <h2>Input Types</h2>
@@ -17,12 +23,19 @@
             <input type="text" id="lname" name="lname"><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password"><br><br>
-            <input type="submit" value="Submit">
+            <label for="cities">City:</label><br>
+            <select id="cities" name="cities" required>
+                <option value="JAI">Jaipur</option>
+                <option value="DEL">New Delhi</option>
+                <option value="UDR">Udaipur</option>
+                <option value="MUM">Mumbai</option>
+            </select> <br><br>
+            <input type="submit" value="Submit" onclick="processForm()">
             <input type="reset" value="Reset">
         </form>
 
 
-        <!-- <form>
+        <form>
             <h2>Choose your favorite Web language:</h2>
             <input type="radio" id="html" name="fav_language" value="HTML">
             <label for="html">HTML</label><br>
@@ -30,9 +43,9 @@
             <label for="css">CSS</label><br>
             <input type="radio" id="javascript" name="fav_language" value="JavaScript">
             <label for="javascript">JavaScript</label>
-        </form> -->
+        </form>
 
-        <!-- <form>
+        <form>
             <h2>Input Type Checkbox</h2>
             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
             <label for="vehicle1"> I have a bike</label><br>
@@ -40,50 +53,50 @@
             <label for="vehicle2"> I have a car</label><br>
             <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
             <label for="vehicle3"> I have a boat</label>
-        </form> -->
+        </form>
 
-        <!-- <form>
+        <form>
             <h2>Input Type Date </h2>
             <label for="birthday">Birthday:</label>
             <input type="date" id="birthday" name="birthday"><br><br>
             <label for="datemax">Enter a date before 01-01-1980:</label>
             <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
             <label for="datemin">Enter a date after 01-01-2000:</label>
-            <input type="date" id="datemin" name="datemin" min="2000-01-02">
-        </form> -->
+            <input type="date" id="datemin" name="datemin" max="2025-01-02" min="1979-12-31">
+        </form>
 
-        <!-- <form>
+        <form>
             <h2>Input Type Email</h2>
             <label for="email">Enter your email:</label>
             <input type="email" id="email" name="email">
-        </form> -->
+        </form>
 
-        <!-- <form>
+        <form>
             <h2>Input Type File</h2>
             <label for="myfile">Select a file:</label>
             <input type="file" id="myfile" name="myfile">
-        </form> -->
+        </form>
 
-        <!-- <form>
+        <form>
             <h2>Input Type Hidden</h2>
             <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname"><br><br>
             <input type="hidden" id="custId" name="custId" value="3487">
             <input type="submit" value="Submit">
-        </form> -->
+        </form>
 
-        <!-- <form>
+        <form>
             <h2>Input Type Number</h2>
             <label for="quantity">Quantity (between 1 and 5):</label>
             <input type="number" id="quantity" name="quantity" min="1" max="5">
-        </form> -->
+        </form>
 
-        <!--           <form>
+        <form>
             <h2>Input Type Color </h2>
             <label for="favcolor">Select your favorite color:</label>
-            <input type="color" id="favcolor" name="favcolor">
-        </form> -->
+            <input type="color" id="favcolor" name="favcolor"><br><br>
+        </form>
     </div>
 </body>
-
+<script src="script/index.js"></script>
 </html>

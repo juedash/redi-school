@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styled Form</title>
     <style>
-        body {
+        .container {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
             display: flex;
@@ -66,20 +66,28 @@
         }
     </style>
 </head>
+<link rel="stylesheet" href="style/index.css" type="text/css">
+
 <body>
+    <ul>
+        <li><a class="active" href="/index.html">Home</a></li>
+        <li><a href="/InputTypes.html">Input types</a></li>
+        <li><a href="/FormValidation.html">Form Validation</a></li>
+    </ul>
+    <div class="container">
     <form>
         <h2>HTML Form Validation</h2>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required minlength="3" maxlength="15"><br>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="email" name="email"><br>
         <label for="age">Age:</label>
         <input type="number" id="age" name="age" min="18" max="99"><br>
-        <label for="psw">Password:</label>
+        <label for="password">Password:</label>
         <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
-
         <input type="submit" value="Submit">
     </form>
+</div>
 </body>
 <script src="script/validation.js"></script>
 </html>

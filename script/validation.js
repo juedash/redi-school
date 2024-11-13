@@ -9,8 +9,14 @@ form.addEventListener('submit', function(event) {
     const username = document.getElementById('username').value;
     const age = document.getElementById('age').value;
 
+    const usernameList = ['abc', 'def']
     if (!emailIsValid(email)) {
         alert('Please enter a valid email address.');
+        return;
+    }
+
+    if(usernameList.includes(username)){
+        alert('Username already exists. Please enter another one!');
         return;
     }
 
